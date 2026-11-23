@@ -1,7 +1,7 @@
 # Implementation plan
 
 The work is split into milestones. Each milestone is a set of small issues; each issue is one
-branch and one pull request, with several small commits (see [CONTRIBUTING](../CONTRIBUTING.md)).
+branch and one pull request, with several small commits (see [CONTRIBUTING](../../.github/CONTRIBUTING.md)).
 The milestones and issues are mirrored on GitHub (Issues → Milestones).
 
 Principles for the whole plan:

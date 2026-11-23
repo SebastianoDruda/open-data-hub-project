@@ -12,7 +12,7 @@ configured, **suggested by an LLM**.
 
 *Design Challenge 1 – Software Architecture course, Free University of Bozen-Bolzano (Prof. Eduardo Guerra).*
 
-> **Status:** project skeleton (milestone M0). See the [implementation plan](docs/implementation-plan.md).
+> **Status:** project skeleton (milestone M0). See the [implementation plan](docs/planning/implementation-plan.md).
 
 ## Goals
 
@@ -52,7 +52,7 @@ the plugins' annotations, so a new formatter is immediately available to it.
 | [`llm/`](llm) (`llm-advisor`) | LLM formatting advisor (LangChain4j) – the only module that depends on an LLM library |
 | [`app/`](app) (`app-web`) | Composition root: web server and table page |
 
-More: [architecture overview](docs/architecture/overview.md) · [decision records](docs/adr/README.md).
+More: [architecture overview](docs/architecture/overview.md) · [decision records](docs/architecture/decisions/README.md).
 
 ## Getting started
 
@@ -82,7 +82,7 @@ How to run the web application and configure the LLM provider will be documented
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md): issue → branch → small Conventional Commits → pull request
+See [CONTRIBUTING.md](.github/CONTRIBUTING.md): issue → branch → small Conventional Commits → pull request
 with review and green CI.
 
 ## Use of AI

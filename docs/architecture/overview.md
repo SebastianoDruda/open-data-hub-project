@@ -1,7 +1,7 @@
 # Architecture overview
 
 > Status: initial design, to be refined by the team. Every structural decision is recorded as an
-> ADR in [`docs/adr`](../adr/README.md); this page is the map that ties them together.
+> ADR in [`decisions/`](decisions/README.md); this page is the map that ties them together.
 
 ## 1. Problem
 
@@ -22,11 +22,11 @@ New formatters must be addable **without changing existing code** (Open-Closed P
 
 | Priority | Attribute | What it means here | Main tactic |
 |---|---|---|---|
-| 1 | **Extensibility** | Add a formatter or a data source without touching the core | Plugins discovered with `ServiceLoader`, metadata in annotations ([ADR-0003](../adr/0003-plugins-via-serviceloader-and-annotations.md)) |
-| 2 | **Modularity / testability** | Each part testable in isolation, no hidden coupling | Maven + JPMS modules, star-shaped dependencies towards `table-api` ([ADR-0002](../adr/0002-java-maven-multi-module-jpms.md)) |
-| 3 | **Sustainability / cost** | Few LLM calls, small prompts, smallest model that is good enough | One batched call per table, few samples, cache, suggestion reused as configuration ([ADR-0005](../adr/0005-llm-suggestion-uses-configuration-format.md)) |
+| 1 | **Extensibility** | Add a formatter or a data source without touching the core | Plugins discovered with `ServiceLoader`, metadata in annotations ([ADR-0003](decisions/0003-plugins-via-serviceloader-and-annotations.md)) |
+| 2 | **Modularity / testability** | Each part testable in isolation, no hidden coupling | Maven + JPMS modules, star-shaped dependencies towards `table-api` ([ADR-0002](decisions/0002-java-maven-multi-module-jpms.md)) |
+| 3 | **Sustainability / cost** | Few LLM calls, small prompts, smallest model that is good enough | One batched call per table, few samples, cache, suggestion reused as configuration ([ADR-0005](decisions/0005-llm-suggestion-uses-configuration-format.md)) |
 | 4 | **Reliability** | A wrong or missing LLM answer never breaks the table | Closed catalogue, validation against the registry, fallback chain |
-| 5 | **Security** | API values are untrusted input to the prompt and to the HTML | Prompt-injection defences, HTML escaping in one place (the renderer), API key only on the server ([ADR-0004](../adr/0004-server-side-formatting.md)) |
+| 5 | **Security** | API values are untrusted input to the prompt and to the HTML | Prompt-injection defences, HTML escaping in one place (the renderer), API key only on the server ([ADR-0004](decisions/0004-server-side-formatting.md)) |
 
 ## 3. Modules
 

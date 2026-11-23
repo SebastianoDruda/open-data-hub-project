@@ -3,7 +3,7 @@
 ## Workflow
 
 1. **Pick or open an issue.** Every piece of work starts from an issue in a milestone
-   (see [docs/implementation-plan.md](docs/implementation-plan.md)). Assign it to yourself.
+   (see [docs/planning/implementation-plan.md](../docs/planning/implementation-plan.md)). Assign it to yourself.
 2. **Create a branch** from an up-to-date `main`:
    `feat/<issue-number>-short-name`, `fix/...`, `docs/...`, `refactor/...`, `test/...`, `chore/...`.
 3. **Commit small and often**, using [Conventional Commits](https://www.conventionalcommits.org/):
@@ -24,11 +24,11 @@ Requirements: JDK 21+. No API key is needed to build or test.
 
 ## Design rules
 
-- Respect the module dependency rules in [docs/architecture/overview.md](docs/architecture/overview.md):
+- Respect the module dependency rules in [docs/architecture/overview.md](../docs/architecture/overview.md):
   everything depends on `table-api`; plugins never depend on each other; only `llm-advisor`
   depends on an LLM library.
 - A change that affects the structure (new module, new dependency, new pattern, changed contract)
-  needs an **ADR** in `docs/adr` in the same pull request.
+  needs an **ADR** in `docs/architecture/decisions` in the same pull request.
 - Clean code: meaningful names, small functions, guard clauses, no `if` chains on types
   (use polymorphism / the registry), no duplicated logic.
 - Changes to `table-api` affect every module: discuss them with the team first.
@@ -50,6 +50,6 @@ once it exists. `.env` and `*.key` files are ignored by git.
 The assignment requires that **all prompts and interactions with AI are shared** and that the team
 understands everything that is committed. Therefore:
 
-- every AI-assisted working session gets an entry in [`docs/ai-log`](docs/ai-log/README.md);
+- every AI-assisted working session gets an entry in [`docs/ai-log`](../docs/ai-log/README.md);
 - mention AI assistance in the pull request description;
 - never merge code you cannot explain to the rest of the team.
