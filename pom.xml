@@ -25,14 +25,17 @@
         and the application discovers them at runtime through ServiceLoader. See docs/adr.
     -->
     <modules>
-        <module>table-api</module>
-        <module>table-core</module>
-        <module>formatters-basic</module>
-        <module>formatters-odh</module>
-        <module>source-tourism</module>
-        <module>source-mobility</module>
-        <module>llm-advisor</module>
-        <module>app-web</module>
+        <!-- contract and core -->
+        <module>api</module>
+        <module>core</module>
+        <!-- plugins, grouped by type -->
+        <module>formatters/basic</module>
+        <module>formatters/odh</module>
+        <module>sources/tourism</module>
+        <module>sources/mobility</module>
+        <module>llm</module>
+        <!-- composition root -->
+        <module>app</module>
     </modules>
 
     <properties>

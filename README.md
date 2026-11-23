@@ -41,16 +41,16 @@ The format of a column is resolved by a chain: **explicit configuration → cach
 advisor → plain-text default**. The LLM receives a closed catalogue of formatters generated from
 the plugins' annotations, so a new formatter is immediately available to it.
 
-| Module | Role |
+| Folder | Role |
 |---|---|
-| [`table-api`](table-api) | Stable contract: formatter, data source and advisor interfaces, annotations, table model |
-| [`table-core`](table-core) | Formatter registry, resolution chain, formatting pipeline |
-| [`formatters-basic`](formatters-basic) | General formatters (number, unit, date/time, boolean, text, link, ...) |
-| [`formatters-odh`](formatters-odh) | Open Data Hub specific formatters (multilingual text, coordinates, ...) |
-| [`source-tourism`](source-tourism) | Adapter for the Tourism API |
-| [`source-mobility`](source-mobility) | Adapter for the Mobility API |
-| [`llm-advisor`](llm-advisor) | LLM formatting advisor (LangChain4j) – the only module that depends on an LLM library |
-| [`app-web`](app-web) | Composition root: web server and table page |
+| [`api/`](api) (`table-api`) | Stable contract: formatter, data source and advisor interfaces, annotations, table model |
+| [`core/`](core) (`table-core`) | Formatter registry, resolution chain, formatting pipeline |
+| [`formatters/basic/`](formatters/basic) | General formatters (number, unit, date/time, boolean, text, link, ...) |
+| [`formatters/odh/`](formatters/odh) | Open Data Hub specific formatters (multilingual text, coordinates, ...) |
+| [`sources/tourism/`](sources/tourism) | Adapter for the Tourism API |
+| [`sources/mobility/`](sources/mobility) | Adapter for the Mobility API |
+| [`llm/`](llm) (`llm-advisor`) | LLM formatting advisor (LangChain4j) – the only module that depends on an LLM library |
+| [`app/`](app) (`app-web`) | Composition root: web server and table page |
 
 More: [architecture overview](docs/architecture/overview.md) · [decision records](docs/adr/README.md).
 
@@ -69,15 +69,15 @@ How to run the web application and configure the LLM provider will be documented
 ## Repository layout
 
 ```
-├── table-api/ table-core/            contract and core
-├── formatters-*/ source-*/ llm-advisor/   plugins
-├── app-web/                          composition root
-├── docs/
-│   ├── architecture/                 architecture overview
-│   ├── adr/                          architecture decision records
-│   ├── ai-log/                       prompts and AI interactions (required by the assignment)
-│   └── implementation-plan.md        milestones M0–M8
-└── .github/                          CI, Dependabot, issue / PR templates
+├── api/                 contract shared by everything (table-api)
+├── core/                registry, resolution chain, pipeline (table-core)
+├── formatters/          formatter plugins: basic/, odh/
+├── sources/             Open Data Hub adapters: tourism/, mobility/
+├── llm/                 LLM formatting advisor (llm-advisor)
+├── app/                 web application, composition root (app-web)
+├── docs/                architecture, planning, AI log
+├── .github/             CI, contribution guide, issue templates
+└── pom.xml, mvnw        build
 ```
 
 ## Contributing
