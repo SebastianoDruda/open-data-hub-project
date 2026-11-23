@@ -1,0 +1,31 @@
+# Build output
+target/
+*.class
+*.jar
+!.mvn/wrapper/maven-wrapper.jar
+*.log
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.project
+.classpath
+.settings/
+.factorypath
+bin/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets and local configuration (never commit API keys)
+.env
+.env.*
+!.env.example
+*.key
+application-local.*
+
+# LLM response cache and local evaluation runs
+.cache/
+evaluation/runs/local/
