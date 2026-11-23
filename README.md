@@ -82,8 +82,8 @@ How to run the web application and configure the LLM provider will be documented
 
 ## Contributing
 
-See [CONTRIBUTING.md](.github/CONTRIBUTING.md): issue → branch → small Conventional Commits → pull request
-with review and green CI.
+See [CONTRIBUTING.md](.github/CONTRIBUTING.md): single branch (`main`), issue → small Conventional Commits
+→ `./mvnw verify` → push, with CI on every push.
 
 ## Use of AI
 

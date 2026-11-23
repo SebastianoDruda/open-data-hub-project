@@ -10,6 +10,6 @@ We record every significant architectural decision as a short ADR (see [ADR-0001
 | [0004](0004-server-side-formatting.md) | Formatting on the server, thin web component | Proposed |
 | [0005](0005-llm-suggestion-uses-configuration-format.md) | The LLM suggestion uses the configuration format | Proposed |
 
-**Process:** copy [`template.md`](template.md), give it the next number, open a pull request.
-A *Proposed* ADR becomes *Accepted* when the whole team has approved the pull request.
+**Process:** copy [`template.md`](template.md), give it the next number, commit it as *Proposed* and
+open an issue labelled `adr` for the discussion. It becomes *Accepted* when the whole team agrees.
 Accepted ADRs are not edited: a new ADR *supersedes* them.

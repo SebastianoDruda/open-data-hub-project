@@ -1,6 +1,0 @@
-# Every pull request asks for a review from the other team members.
-* @SebastianoDruda @wieserjac @tom-spri
-
-# The shared contract affects every module: changes need extra care.
-/table-api/ @SebastianoDruda @wieserjac @tom-spri
-/docs/adr/ @SebastianoDruda @wieserjac @tom-spri

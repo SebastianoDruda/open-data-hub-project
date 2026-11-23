@@ -1,7 +1,7 @@
 # Implementation plan
 
-The work is split into milestones. Each milestone is a set of small issues; each issue is one
-branch and one pull request, with several small commits (see [CONTRIBUTING](../../.github/CONTRIBUTING.md)).
+The work is split into milestones. Each milestone is a set of small issues; each issue is done
+with several small commits directly on `main` (see [CONTRIBUTING](../../.github/CONTRIBUTING.md)).
 The milestones and issues are mirrored on GitHub (Issues → Milestones).
 
 Principles for the whole plan:
@@ -20,7 +20,7 @@ Suggested ownership (to be confirmed by the team), so that every member owns one
 | Formatters & web (formatter plugins, renderer, web component) | M2, M6 | _tbd_ |
 | Data sources & LLM (Open Data Hub adapters, advisor, evaluation) | M3, M5, M7 | _tbd_ |
 
-Everyone reviews the others' pull requests, and M8 is shared.
+Everyone reads the others' commits on `main`, and M8 is shared.
 
 ---
 
@@ -28,15 +28,16 @@ Everyone reviews the others' pull requests, and M8 is shared.
 
 - [x] Repository, license, editor settings, `.gitignore` (API keys excluded)
 - [x] Maven multi-module skeleton with JPMS descriptors and Maven wrapper
-- [x] CI on GitHub Actions, Dependabot
+- [x] CI on GitHub Actions
 - [x] Architecture overview, ADR process, initial ADRs (Proposed)
-- [x] Implementation plan, contribution guidelines, issue/PR templates, AI log
+- [x] Implementation plan, contribution guidelines, issue templates, AI log
+- [x] Folders organized by type, single-branch workflow
 
 ## M1 – Walking skeleton (contract + core)
 
 Goal: a hard-coded table formatted by one real formatter, end to end in a unit test.
 
-1. Review and accept ADR-0002..0005 (team meeting, merge or amend).
+1. Review and accept ADR-0002..0005 (team meeting, accept or amend).
 2. `table-api`: `ColumnFormatter`, `@Formatter`/`@Param` annotations, `FormatterStep`, `ColumnSpec`,
    table model (`Column`, `Row`, `Table`), `DataSource`, `FormattingAdvisor`; export the package.
 3. `table-core`: `FormatterRegistry` with `ServiceLoader` discovery, duplicate-id check, step

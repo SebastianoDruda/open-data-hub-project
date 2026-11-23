@@ -13,7 +13,8 @@ discussed only in chat are lost and cannot be presented or reviewed.
 ## Decision
 
 We keep Architecture Decision Records (lightweight, one Markdown file per decision) in `docs/architecture/decisions`,
-following the template in `template.md`. Every ADR is reviewed through a pull request.
+following the template in `template.md`. Every ADR is discussed by the whole team in an issue
+labelled `adr` before it is accepted.
 
 ## Consequences
 
