@@ -1,0 +1,31 @@
+name: Task / feature
+description: A unit of work from the implementation plan
+labels: ["type: feature"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What should be possible after this issue is closed?
+    validations:
+      required: true
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Tasks
+      value: |
+        - [ ]
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of done
+      value: |
+        - [ ] Code respects the module dependency rules
+        - [ ] Unit tests added (no network, no LLM)
+        - [ ] ADR added if the structure changed
+        - [ ] AI log entry added if AI was used
+  - type: input
+    id: module
+    attributes:
+      label: Module(s)
+      placeholder: e.g. table-core, formatters-basic
