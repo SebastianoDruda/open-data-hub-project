@@ -35,3 +35,4 @@ What remains to be done or discussed.
 | # | Date | Author | Topic |
 |---|---|---|---|
 | 01 | 2026-11-23 | Sebastiano Druda | [Assignment analysis and repository setup](2026-11-23-sebastiano-brainstorming-and-setup.md) |
+| 02 | 2026-11-23 | Sebastiano Druda | [Repository structure and workflow](2026-11-23-sebastiano-repository-structure.md) |
